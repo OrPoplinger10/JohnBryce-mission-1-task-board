@@ -1,0 +1,153 @@
+body{
+    background-image: url(assets/tile.jpg);
+   
+ }
+ 
+ h1{
+     text-align: center;
+     font-family: 'Kaushan Script', cursive;
+     font-size:50px;
+     margin-top: 30px;
+ }
+
+ h5{
+    font-family: 'Kaushan Script', cursive;
+ }
+
+ .mission{
+    margin-left: -8px;
+
+ }
+
+.form{
+    background-image: url(assets/formbg.jpg);
+    background-repeat: repeat-y;
+    background-position: center;
+    margin: auto;
+    height: 250px;
+    padding-top: 8px;
+}
+
+.formInput{
+    width: 80%;
+    display: inline;
+    margin-bottom: 28px;
+    margin-left: 9px;
+    border: none;
+    background: rgba(255, 255, 256,0);
+}
+.formInput:focus{
+    box-shadow:none;
+    background: rgba(255, 255, 256,0);
+
+}
+
+.formInput:nth-of-type(4){
+    position: relative;
+    left: 0;
+}
+ 
+label{
+    margin-left: 20px;
+    width: 10%;
+    padding-top:7px;
+    
+}
+
+label:nth-last-of-type(3){
+    position: relative;
+    top: 10px;
+}
+
+ 
+ .text-success{
+     height: 3px;
+         background-color: black;
+         border: none;
+         margin-top: 80px;
+ }
+
+ .d-flex1{
+    margin-top: 258px;
+    margin-left: -470px;
+    
+}
+
+button{
+    display: block;
+    margin-right: 30px;
+    
+}
+
+.col-5{
+    background-image:url(assets/notebg.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 245px;
+    height:245px;
+    margin-left: 5px;
+    animation: fadein 1s;  
+}
+
+.date{
+    display: inline-block;
+    font-family: 'Kaushan Script', cursive;
+    padding: 20px;
+    border-radius: 20px;
+    margin:-20px 0px 0px 20px;
+}
+
+.hour{
+    font-family: 'Kaushan Script', cursive;
+    padding: 20px;
+    border-radius: 20px;
+   margin-left: 40px;
+   padding-top:2px ; 
+}
+
+.scroller{
+   display: flex;
+overflow-y: scroll; 
+    line-height: 120%;
+    height:70px ;
+    margin-right: 73px;
+    padding-top: 15px;
+    margin-top: -30px;
+    font-family: 'Kaushan Script', cursive;
+    margin-left: 10px;  
+}
+
+svg{
+  
+  margin-top: 12px;
+  margin-left: 150px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.button-remove{
+    visibility: hidden;
+}
+
+.col-5:hover .button-remove{
+    visibility: visible;
+}
+
+
+
+@keyframes fadein {
+    0%{opacity: 0;}
+    100% {opacity: 100;}
+ }
+
+ 
+
+
+
+
+
+
+ 
+
+
+

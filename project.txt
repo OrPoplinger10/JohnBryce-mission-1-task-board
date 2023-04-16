@@ -1,0 +1,76 @@
+const formUser = document.querySelector("form");
+const createTask = document.getElementById("buttonOne");
+const missionBoard = document.getElementsByClassName("mission-list");
+let taskList = []; 
+taskList = getFromLocal();
+
+createTask.addEventListener("click", handleCreateTask);
+
+
+if (taskList !== null) {
+    window.onbeforeunload = displayBoradOnScreen(taskList);
+  }
+
+
+
+function handleCreateTask(event) {
+  event.preventDefault();
+  const data = getDataFromUser();
+  saveInLocalStorage(data);
+  displayBoradOnScreen();
+  formUser.reset();
+}
+
+function saveInLocalStorage(data) {
+    taskList = JSON.parse(localStorage.getItem("taskList"));
+    if (taskList) {
+        taskList = [...taskList, data]; 
+    } else {
+        taskList = [data];
+    }
+    localStorage.setItem("taskList", JSON.stringify(taskList));
+}
+
+function getDataFromUser() {
+  data = {};
+  const formData = new FormData(formUser);
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+  return data;
+}
+
+
+
+function getFromLocal() {
+  let localList = JSON.parse(localStorage.getItem("taskList"));
+  return localList;
+}
+
+function displayBoradOnScreen(taskList) {
+    missionBoard.innerHTMl = ""; 
+  taskList = getFromLocal(); 
+  taskList.forEach((mission) => {
+    const newCard = createMissionBoard(mission); 
+    missionBoard.appendChild(newCard); 
+  });
+}
+
+
+function createMissionBoard(data) {
+  const newBoard = document.createElement("div");
+  newBoard.classList.add("d-flex", "missiom-list");
+  newBoard.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" 
+     stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18">
+    </line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <p class="date">${data.formDate}</p>
+     <p class="hour">${data.formHour}</p>
+     <p class="task">${data.diaryMission}</p>`;
+  return newBoard;
+}
+
+
+
+
+
+

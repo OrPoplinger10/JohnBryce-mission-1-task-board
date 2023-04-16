@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diary tasks &#128467;</title>
+ 
+    <!--Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous">
+    
+      <!--Connect css-->
+    <link rel="stylesheet" href="project.css" />
+    
+    <!--Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>My Task Board</h1>
+    <div class="container">
+        
+      <form name="myForm" class="form row d-flex align-center flex-column col-6 mx-auto">
+        <!--FormDate -->
+        <div class="d-flex">
+          <label for="formDate" class="formDate form-label"><h5>Date:</h5></label>
+          <input
+            type="date"
+            class="form-control formInput"
+            id="Date"
+            name="formDate"
+          />
+        </div>
+        
+        <!--FormHour -->
+        <div class="d-flex">
+          <label for="formHour" class="formHour form-label"><h5>Hour:</h5></label>
+          <input
+            type="time"
+            class="form-control formInput"
+            id="hour"
+            name="formHour"
+          />
+        </div>
+        
+        <!--Textarea -->
+        <div class="d-flex">
+            <label for="diaryMission" class="formMission form-label"><h5 class="mission">Mission;</h5></label>
+            <textarea  
+              class="form-control formInput"
+              id="mission"
+              name="diaryMission"
+              rows="2"
+            >
+            </textarea>
+          </div>
+          <div class="d-flex1">
+             
+            <!--Buttons -->
+          <button type="submit" class="btn btn-light" id="buttonOne"><h5>Create Task</h5></button>
+           <button type="reset" class="btn btn-dark"><h5>Reset Form</h5></button>
+      </div>
+      </form>
+    </div>
+    
+    <!--Hr -->
+    <div class="text-success">
+        <hr />
+      </div>
+      <div class="mission-list"></div>
+
+<!-- Connect js -->
+<script src="project.js"></script>
+  </body>
+</html>
+
+ 
